@@ -1,0 +1,16 @@
+# Character Driver
+
+## Compile
+make
+
+## Insert
+sudo insmod char_driver.ko
+
+## Create device
+sudo mknod /dev/mychardev c <major> 0
+
+## Write
+echo "Hello" > /dev/mychardev
+
+## Read
+cat /dev/mychardev
